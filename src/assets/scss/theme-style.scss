@@ -372,3 +372,169 @@ input.big {
     }
   }
 }
+
+.rooms-block {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
+  margin: 0 auto;
+  padding: 60px 0;
+  background-color: #FCF8F3;
+  position: relative;
+
+  .rooms-info {
+    margin-left: 100px;
+
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: #777;
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+
+    .explore-btn {
+      background: #b88e2f;
+      color: #fff;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .rooms-slider {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+
+    .main-slide {
+      max-width: 404px;
+      max-height: 582px;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .slide-card {
+        backdrop-filter: blur(3px);
+        position: absolute;
+        left: 24px;
+        bottom: 24px;
+        background: #FFFFFFB8;
+        padding: 18px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, .15);
+
+        .number {
+          font-size: 14px;
+          color: #777;
+          white-space: nowrap;
+        }
+
+        strong {
+          font-size: 18px;
+          white-space: nowrap;
+        }
+
+      }
+
+      .arrow {
+        width: 36px;
+        height: 36px;
+        background: #b88e2f;
+        position: absolute;
+        left: 180px;
+        bottom: 24px;
+        flex-shrink: 0;
+
+        &::before {
+          content: "";
+          border: solid #fff;
+          border-width: 0 2px 2px 0;
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+
+    .side-card {
+      width: 372px;
+      height: 486px;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .side-arrow {
+        width: 45px;
+        height: 45px;
+        background: #b88e2f;
+        border-radius: 50%;
+        position: absolute;
+        right: -22px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+
+        &::before {
+          content: "";
+          border: solid #fff;
+          border-width: 0 3px 3px 0;
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .rooms-dots {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+
+    label {
+      width: 12px;
+      height: 12px;
+      border: 2px solid #bdbdbd;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+
+  #r1:checked ~ .rooms-dots label:nth-child(1),
+  #r2:checked ~ .rooms-dots label:nth-child(2),
+  #r3:checked ~ .rooms-dots label:nth-child(3) {
+    background: #bdbdbd;
+  }
+}
+
