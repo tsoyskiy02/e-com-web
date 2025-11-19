@@ -269,6 +269,23 @@ input.big {
   }
 }
 
+.btn {
+  margin: 44px auto 69px auto;
+  width: max-content;
+
+
+  button {
+    border: 1px solid #b88e2f;
+    padding: 12px 74px 12px 82px;
+    text-align: center;
+    background-color: #fff;
+    color: #b88e2f;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 600;
+  }
+}
+
 .products {
   .title {
     margin-bottom: 32px;
@@ -278,6 +295,7 @@ input.big {
     line-height: 120%;
     text-align: center;
   }
+
 
   &-cards {
     display: flex;
@@ -290,6 +308,29 @@ input.big {
       max-height: 446px;
       width: 100%;
       background-color: #f4f5f7;
+      position: relative;
+
+      .discount {
+        position: absolute;
+        top: 24px;
+        left: 213px;
+        color: #fff;
+        background-color: #e97171;
+        border-radius: 50%;
+        padding: 12px 5px;
+        text-align: center;
+      }
+
+      .new {
+        position: absolute;
+        top: 24px;
+        left: 213px;
+        color: #fff;
+        background-color: #2EC1AC;
+        border-radius: 50%;
+        padding: 12px 5px;
+        text-align: center;
+      }
 
       img {
         width: 100%;
