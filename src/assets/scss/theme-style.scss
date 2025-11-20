@@ -181,7 +181,7 @@ input.big {
     width: 643px;
     height: 443px;
     position: absolute;
-    top: 253px;
+    top: 185px;
     left: 739px;
 
     .title {
@@ -223,6 +223,21 @@ input.big {
         font-size: 16px;
         color: #fff;
         text-transform: uppercase;
+        cursor: pointer;
+        transition: transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+
+        &:hover {
+          background-color: #c89c36;
+          transform: translateY(-2px);
+          box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18);
+        }
+
+        &:active {
+          transform: translateY(-1px) scale(1.01);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
       }
     }
   }
@@ -238,6 +253,13 @@ input.big {
       font-weight: 700;
       font-size: 32px;
       color: #333;
+    }
+
+    small {
+      color: #666;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 100%;
     }
 
     margin-bottom: 62px;
@@ -283,6 +305,22 @@ input.big {
     font-size: 16px;
     line-height: 150%;
     font-weight: 600;
+    transition: background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+
+    &:hover {
+      background-color: #b88e2f;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+    }
   }
 }
 
@@ -309,6 +347,13 @@ input.big {
       width: 100%;
       background-color: #f4f5f7;
       position: relative;
+      transition: transform 0.35s ease,
+      box-shadow 0.35s ease;
+
+      &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+      }
 
       .discount {
         position: absolute;
@@ -406,6 +451,20 @@ input.big {
       border-radius: 4px;
       cursor: pointer;
       font-weight: 600;
+      transition: background-color 0.3s ease,
+      box-shadow 0.3s ease,
+      transform 0.3s ease;
+
+      &:hover {
+        background-color: #c89c36;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+      }
+
+      &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+      }
     }
   }
 
@@ -436,7 +495,7 @@ input.big {
         left: 24px;
         bottom: 24px;
         background: #FFFFFFB8;
-        padding: 18px 24px;
+        padding: 24px 40px;
         display: flex;
         flex-direction: column;
         gap: 14px;
@@ -460,9 +519,13 @@ input.big {
         height: 36px;
         background: #b88e2f;
         position: absolute;
-        left: 180px;
+        left: 212px;
         bottom: 24px;
         flex-shrink: 0;
+        cursor: pointer;
+        transition: background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 
         &::before {
           content: "";
@@ -474,6 +537,16 @@ input.big {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &:hover {
+          background-color: #c89c36;
+          transform: translateY(-3px);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+        }
+
+        &:hover::before {
+          transform: translate(-50%, -50%) rotate(-45deg) translateX(2px);
         }
       }
     }
@@ -517,8 +590,8 @@ input.big {
 
   .rooms-dots {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 55px;
+    right: 430px;
     display: flex;
     gap: 10px;
 
@@ -528,6 +601,15 @@ input.big {
       border: 2px solid #bdbdbd;
       border-radius: 50%;
       cursor: pointer;
+      transition: background-color 0.25s ease,
+      transform 0.25s ease,
+      border-color 0.25s ease;
+
+      &:hover {
+        border-color: #b88e2f;
+        background-color: rgba(184, 142, 47, 0.3);
+        transform: scale(1.25);
+      }
     }
   }
 
@@ -727,3 +809,43 @@ input.big {
   }
 }
 
+.catalog-banner {
+  position: relative;
+
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+
+      strong {
+        color: #000;
+        font-weight: 500;
+        font-size: 48px;
+      }
+
+      .subtitle {
+        display: flex;
+        gap: 6px;
+        justify-content: center;
+
+        span {
+          color: #000;
+          font-weight: 500;
+          font-size: 16px;
+        }
+
+        small {
+          font-weight: 300;
+          font-size: 16px;
+          color: #000;
+        }
+      }
+    }
+  }
+}
