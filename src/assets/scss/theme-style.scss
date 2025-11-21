@@ -802,10 +802,9 @@ input.big {
       }
 
       p {
-        max-width: 200px;
-        font-size: 14px;
-        line-height: 20px;
-        color: #666;
+        font-size: 16px;
+        line-height: 100%;
+        color: #9f9f9f;
       }
     }
 
@@ -869,8 +868,9 @@ input.big {
     margin: 30px auto 0;
     padding-top: 20px;
     border-top: 1px solid #eee;
-    font-size: 14px;
-    color: #666;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
   }
 }
 
@@ -1117,6 +1117,236 @@ input.big {
           font-weight: 500;
           font-size: 20px;
           line-height: 150%;
+        }
+      }
+    }
+  }
+}
+
+.collection-title {
+  padding: 38px 99px;
+  background-color: #F9F1E7;
+
+  .container {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+
+
+    .collection-name {
+      display: flex;
+      align-items: center;
+
+      span {
+        color: #000;
+        font-weight: 400;
+        font-size: 16px;
+      }
+
+      .hr {
+        margin-right: 34px;
+        margin-left: 25px;
+        border-left: 1px solid #9f9f9f;
+        width: 0;
+        height: 37px;
+      }
+
+    }
+
+    .navigation {
+      display: flex;
+      gap: 24px;
+
+      .link {
+        display: flex;
+        gap: 15px;
+
+        a {
+          text-decoration: none;
+          color: #9f9f9f;
+          font-weight: 400;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.collection-content {
+  margin-top: 35px;
+  margin-inline: 99px;
+  display: flex;
+  gap: 106px;
+
+  .left-side {
+    display: flex;
+    gap: 31px;
+
+    .main-img {
+      height: 500px;
+      width: 423px;
+      border-radius: 10px;
+      background-color: #F9F1E7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      .card {
+        width: 76px;
+        height: 80px;
+        border-radius: 10px;
+        background-color: #F9F1E7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  .right-side {
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      strong {
+        font-size: 42px;
+        font-weight: 400;
+        color: #000;
+      }
+
+      .subtitle {
+        small {
+          font-weight: 500;
+          font-size: 24px;
+          color: #9f9f9f;
+        }
+      }
+
+      .rate {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+
+        .hr {
+          width: 30px;
+          height: 0px;
+          border: 1px solid #9F9F9F;
+          transform: rotate(90deg);
+        }
+
+        span {
+          font-weight: 400;
+          font-size: 13px;
+          color: #9f9f9f;
+        }
+
+        .star {
+          display: flex;
+          gap: 7px;
+        }
+      }
+
+      .description {
+        span {
+          font-weight: 400;
+          font-size: 13px;
+          color: #000;
+        }
+      }
+
+      .size {
+        small {
+          font-weight: 400;
+          color: #9f9f9f;
+          font-size: 14px;
+        }
+
+        .sizes {
+          display: flex;
+          gap: 16px;
+          align-items: center;
+          margin-top: 12px;
+
+          .size-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            color: #000;
+            font-weight: 400;
+            font-size: 13px;
+            background-color: #f9f1e7;
+            border-radius: 5px;
+          }
+
+          .active {
+            background-color: #b88e2f;
+            color: #fff;
+          }
+        }
+
+      }
+
+      .colors {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        margin-top: 12px;
+      }
+
+      .actions {
+        .count {
+          .quantity {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 12px 20px;
+            border: 1px solid #d0d0d0;
+            border-radius: 12px;
+            width: fit-content;
+            user-select: none;
+
+            .qty-btn {
+              background: transparent;
+              border: none;
+              font-size: 20px;
+              cursor: pointer;
+              padding: 0 5px;
+
+              &:hover {
+                opacity: .6;
+              }
+            }
+
+            .qty-value {
+              font-size: 18px;
+              min-width: 20px;
+              text-align: center;
+            }
+          }
         }
       }
     }
