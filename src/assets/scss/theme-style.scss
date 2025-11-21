@@ -153,6 +153,13 @@ input.big {
       gap: 75px;
       list-style-type: none;
 
+      a {
+        font-weight: 500;
+        font-size: 16px;
+        color: #000000;
+        text-decoration: none;
+      }
+
       li {
         font-weight: 500;
         font-size: 16px;
@@ -353,6 +360,61 @@ input.big {
       &:hover {
         transform: translateY(-6px);
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+      }
+
+      .card-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+
+        .add-to-cart {
+          background: white;
+          border: none;
+          padding: 12px 52px;
+          cursor: pointer;
+          color: #B88E2F;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 150%;
+        }
+
+        .card-actions {
+          .content-overlay {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            div {
+              display: flex;
+              align-items: center;
+              gap: 2px;
+
+              img {
+                width: 24px;
+                height: 24px;
+                object-fit: contain;
+              }
+
+              span {
+                color: white;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+      &:hover .card-overlay {
+        opacity: 1;
       }
 
       .discount {
