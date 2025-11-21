@@ -11,7 +11,7 @@ const paths = {
     html: {
         src: 'src/**/*.html',
         dest: 'dist/',
-        main: 'src/index.html'
+        main: 'src/**/*.html'
     },
     styles: {
         src: 'src/assets/scss/**/*.scss',
@@ -36,7 +36,11 @@ const paths = {
 }
 
 function html() {
-    return src(paths.html.main).pipe(plumber()).pipe(rigger()).pipe(dest(paths.html.dest)).pipe(browserSync.stream())
+    return src(paths.html.main)
+        .pipe(plumber())
+        .pipe(rigger())
+        .pipe(dest(paths.html.dest))
+        .pipe(browserSync.stream())
 }
 
 function copyCss() {
