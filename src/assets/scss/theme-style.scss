@@ -829,23 +829,29 @@ input.big {
         color: #000;
         font-weight: 500;
         font-size: 48px;
+        cursor: pointer;
       }
 
       .subtitle {
         display: flex;
         gap: 6px;
         justify-content: center;
+        margin-top: 5px;
 
         span {
           color: #000;
           font-weight: 500;
           font-size: 16px;
+          cursor: pointer;
+
         }
 
         small {
           font-weight: 300;
           font-size: 16px;
           color: #000;
+          cursor: pointer;
+
         }
       }
     }
@@ -867,6 +873,12 @@ input.big {
     img {
       width: 16px;
       height: 16px;
+      transition: opacity 0.15s ease;
+
+      &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+      }
     }
 
     .left-side {
@@ -877,6 +889,12 @@ input.big {
         display: flex;
         gap: 12px;
         align-items: center;
+        transition: background 0.15s ease;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.08);
+          cursor: pointer;
+        }
       }
 
     }
@@ -978,20 +996,31 @@ input.big {
     font-size: 20px;
     font-weight: 400;
     background-color: #f9f1e7;
-  }
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
 
-  .active {
-    background-color: #b88e2f;
-    color: #fff;
-    font-weight: 400;
-    font-size: 20px;
-  }
+    &:hover {
+      background: #bdbdbd;
+      color: #fff;
+    }
 
-  .next {
-    width: 98px;
-    height: 60px;
+    &.active {
+      background-color: #b88e2f;
+      color: #fff;
+    }
+
+    &.next {
+      width: 98px;
+      height: 60px;
+
+      &:hover {
+        background: #000;
+        color: #fff;
+      }
+    }
   }
 }
+
 
 .additional-info {
   background-color: #faf3ea;
